@@ -1,15 +1,24 @@
-import { Inter } from 'next/font/google'
+import Hero from '@/components/Hero'
+import { VStack } from '@chakra-ui/react'
 import Nav from '../components/Nav'
-
-const inter = Inter({ subsets: ['latin'] })
+import Features from '@/components/Features'
+import Pricing from '@/components/Pricing'
+import Footer from '@/components/Footer'
 
 export default function Home() {
   return (
     <>
       <Nav/>
-      
-      <div>hello</div>
-
+      <VStack 
+        w="full"
+        mx="auto" 
+        spacing='24px'
+        maxW="1200px">
+        <Hero/>
+        <Features/>
+        <Pricing/>
+        <Footer/>
+      </VStack>
     </>
   )
 }
