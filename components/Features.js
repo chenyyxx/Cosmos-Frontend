@@ -116,7 +116,7 @@ export default function Features() {
                 color: "gray.900",
               }}
             >
-              A better way to send money
+              A better way to send your crypto
             </Text>
             <Text
               mt={4}
@@ -130,8 +130,8 @@ export default function Features() {
                 color: "gray.400",
               }}
             >
-              Lorem ipsum dolor sit amet consect adipisicing elit. Possimus
-              magnam voluptatum cupiditate veritatis in accusamus quisquam.
+              Protect your crypto assets with the world’s most secure and reliable transaction system. 
+              Our system blocks suspicious transactions and keeps your assets safe
             </Text>
           </Box>
 
@@ -155,7 +155,7 @@ export default function Features() {
               }}
             >
               <Feature
-                title="Competitive exchange rates"
+                title="Security"
                 icon={
                   <path
                     strokeLinecap="round"
@@ -165,13 +165,12 @@ export default function Features() {
                   />
                 }
               >
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Maiores impedit perferendis suscipit eaque, iste dolor
-                cupiditate blanditiis ratione.
+                Your data is safe with us. 
+                Our product has a strong security system that can prevent unauthorized access and protect your data.
               </Feature>
 
               <Feature
-                title=" No hidden fees"
+                title=" User-friendly interface"
                 icon={
                   <path
                     strokeLinecap="round"
@@ -181,13 +180,12 @@ export default function Features() {
                   />
                 }
               >
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Maiores impedit perferendis suscipit eaque, iste dolor
-                cupiditate blanditiis ratione.
+                Our product is designed with you in mind. 
+                It has an intuitive and user-friendly interface that is easy to navigate and use.
               </Feature>
 
               <Feature
-                title="Transfers are instant"
+                title="Compatibility"
                 icon={
                   <path
                     strokeLinecap="round"
@@ -197,13 +195,12 @@ export default function Features() {
                   />
                 }
               >
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Maiores impedit perferendis suscipit eaque, iste dolor
-                cupiditate blanditiis ratione.
+                Our product works with all your devices and workflows. 
+                It is compatible with different platforms and can be easily integrates with different workflows.
               </Feature>
 
               <Feature
-                title="Mobile notifications"
+                title="Reliability"
                 icon={
                   <path
                     strokeLinecap="round"
@@ -213,9 +210,8 @@ export default function Features() {
                   />
                 }
               >
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Maiores impedit perferendis suscipit eaque, iste dolor
-                cupiditate blanditiis ratione.
+                You can count on us. 
+                Our product is reliable and performs well under different conditions.
               </Feature>
             </Stack>
           </Box>

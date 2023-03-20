@@ -87,7 +87,7 @@ export default function SignupForm() {
                             md: "tight",
                         }}
                     >
-                        Ready to start your journey?
+                        Ready to experience scams free transactions?
                     </Heading>
                     <Text
                         mb={{
@@ -102,10 +102,9 @@ export default function SignupForm() {
                         color="gray.500"
                         letterSpacing="wider"
                     >
-                        Low-latency voice and video feels like you’re in the
-                        same room. Wave hello over video, watch friends stream
-                        their games, or gather up and have a drawing session
-                        with screen share.
+                        Don’t wait until it’s too late. 
+                        Protect your crypto assets today with our secure and reliable transaction system.
+                        Try it now and experience peace of mind.
                     </Text>
                 </GridItem>
                 <GridItem
@@ -122,7 +121,7 @@ export default function SignupForm() {
                                 color: "gray.600",
                             }}
                         >
-                            <Text pt={2}>Start talking now</Text>
+                            <Text pt={2}>Sign up now</Text>
                         </Center>
                         <SimpleGrid
                             columns={1}

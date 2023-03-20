@@ -112,7 +112,7 @@ export default function Nav() {
               _focus={{
                 boxShadow: "none",
               }}
-              rightIcon={<IoIosArrowDown />}
+              // rightIcon={<IoIosArrowDown />}
             >
               Features
             </Button>
@@ -131,7 +131,7 @@ export default function Nav() {
             >
               Pricing
             </Button>
-            <Button
+            {/* <Button
               bg={bg}
               color="gray.500"
               display="inline-flex"
@@ -145,7 +145,7 @@ export default function Nav() {
               }}
             >
               Contact
-            </Button>
+            </Button> */}
           </HStack>
         </Flex>
         <Spacer />
