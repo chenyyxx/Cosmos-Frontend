@@ -4,6 +4,7 @@ import Nav from "../components/Nav";
 import Features from "@/components/Features";
 import Pricing from "@/components/Pricing";
 import Footer from "@/components/Footer";
+import SignupForm from "@/components/SignupForm"
 
 export default function Home() {
     return (
@@ -13,6 +14,7 @@ export default function Home() {
                 <Hero />
                 <Features />
                 <Pricing />
+                <SignupForm />
                 <Footer />
             </VStack>
         </>

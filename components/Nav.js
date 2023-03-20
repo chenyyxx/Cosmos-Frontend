@@ -11,6 +11,8 @@ import {
 } from "@chakra-ui/react";
 import { useRef, useEffect, useState } from "react";
 import { useScroll } from "framer-motion";
+import Image from 'next/image'
+import Logo from '../public/Cosmos-logos_transparent.png'
 
 import { AiFillHome, AiOutlineInbox, AiOutlineMenu } from "react-icons/ai";
 import { BsFillCameraVideoFill } from "react-icons/bs";
@@ -63,7 +65,7 @@ export default function Nav() {
     return (
         <Flex
             ref={ref}
-            position={'fixed'}
+            position={"fixed"}
             shadow={y > height ? "sm" : undefined}
             transition="box-shadow 0.2s"
             bg={bg}
@@ -86,8 +88,11 @@ export default function Nav() {
                 <Flex align="flex-start" pr="48px">
                     <Link href="/">
                         <HStack>
-                            <div>Cosmos</div>
-                            {/* <Logo/> */}
+                            <Image
+                                height={196}
+                                src={Logo}
+                                alt="Picture of the author"
+                            />
                         </HStack>
                     </Link>
                 </Flex>
