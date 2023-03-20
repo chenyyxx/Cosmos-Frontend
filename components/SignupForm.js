@@ -20,6 +20,25 @@ export default function SignupForm() {
     const [email, setEmail] = useState("");
     const [safeAddress, setSafeAddress] = useState("");
     const [safetyLevel, setSafetyLevel] = useState("");
+
+    const handleSubmit = async (e) => {
+        alert("submitted successfully");
+        e.preventDefault();
+        let form = {
+            firstName,
+            lastName,
+            email,
+            safeAddress,
+            safetyLevel,
+            submittedAt: new Date().toISOString(),
+        }
+        let response = await fetch('/api/submit', {
+            method: 'POST',
+            body: JSON.stringify(form),
+        });
+        console.log(response.json())
+    };
+
     return (
         <Box px={8} py={24} mx="auto">
             <SimpleGrid
@@ -95,7 +114,7 @@ export default function SignupForm() {
                         md: 4,
                     }}
                 >
-                    <Box as="form" mb={6} rounded="lg" shadow="xl">
+                    <Box as="form" mb={6} rounded="lg" shadow="xl" onSubmit={handleSubmit}>
                         <Center
                             pb={0}
                             color="gray.700"
@@ -119,6 +138,7 @@ export default function SignupForm() {
                                 <VisuallyHidden>First Name</VisuallyHidden>
                                 <Input
                                     mt={0}
+                                    required
                                     type="text"
                                     placeholder="First Name"
                                     value={firstName}
@@ -129,6 +149,7 @@ export default function SignupForm() {
                                 <VisuallyHidden>Last Name</VisuallyHidden>
                                 <Input
                                     mt={0}
+                                    required
                                     type="text"
                                     placeholder="Last Name"
                                     value={lastName}
@@ -138,6 +159,7 @@ export default function SignupForm() {
                             <Flex>
                                 <VisuallyHidden>Email Address</VisuallyHidden>
                                 <Input
+                                    required
                                     mt={0}
                                     type="email"
                                     placeholder="Email Address"
@@ -148,6 +170,7 @@ export default function SignupForm() {
                             <Flex>
                                 <VisuallyHidden>Safe Address</VisuallyHidden>
                                 <Input
+                                    required
                                     mt={0}
                                     type="text"
                                     placeholder="Safe Address"
@@ -158,6 +181,7 @@ export default function SignupForm() {
                             <Flex>
                                 <VisuallyHidden>Safety Level</VisuallyHidden>
                                 <Select 
+                                    required
                                     placeholder='Safety Level'
                                     value={safetyLevel}
                                     onChange={(event) => {
