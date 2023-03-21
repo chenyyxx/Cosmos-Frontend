@@ -18,7 +18,7 @@ import { AiFillHome, AiOutlineInbox, AiOutlineMenu } from "react-icons/ai";
 import { BsFillCameraVideoFill } from "react-icons/bs";
 import { IoIosArrowDown } from "react-icons/io";
 
-export default function Nav() {
+export default function Nav(props) {
   const bg = "white";
   const ref = useRef(null);
   const [y, setY] = useState(0);
@@ -160,7 +160,7 @@ export default function Nav() {
             <Button colorScheme="purple" variant="ghost" size="sm">
               Log In
             </Button>
-            <Button colorScheme="purple" variant="solid" size="sm">
+            <Button colorScheme="purple" variant="solid" size="sm" onClick={props.handleClick}>
               Start for Free
             </Button>
           </HStack>

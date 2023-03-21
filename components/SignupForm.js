@@ -12,9 +12,9 @@ import {
     Select,
 } from "@chakra-ui/react";
 
-import { useRef, useEffect, useState } from "react";
+import { useRef, useEffect, useState, forwardRef } from "react";
 
-export default function SignupForm() {
+const SignupForm = (props, ref) => {
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
     const [email, setEmail] = useState("");
@@ -113,7 +113,7 @@ export default function SignupForm() {
                         md: 4,
                     }}
                 >
-                    <Box as="form" mb={6} rounded="lg" shadow="xl" onSubmit={handleSubmit}>
+                    <Box as="form" mb={6} rounded="lg" shadow="xl" onSubmit={handleSubmit} ref={ref}>
                         <Center
                             pb={0}
                             color="gray.700"
@@ -210,3 +210,6 @@ export default function SignupForm() {
         </Box>
     );
 }
+
+
+export default forwardRef(SignupForm);

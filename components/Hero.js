@@ -7,7 +7,7 @@ import {
   Icon,
 } from '@chakra-ui/react';
 
-export default function Hero() {
+export default function Hero(props) {
   return (
     <Box px={8} py={8} mx="auto">
       <Box
@@ -105,6 +105,7 @@ export default function Hero() {
             }}
             size="lg"
             cursor="pointer"
+            onClick={props.handleClick}
           >
             Start for Free
             <Icon boxSize={4} ml={1} viewBox="0 0 20 20" fill="currentColor">

@@ -11,7 +11,7 @@ import {
 
 import { useState } from "react";
 
-const PlanB = () => {
+const PlanB = (props) => {
   const topBg = "gray.100";
   const bottomBg = "white";
 
@@ -171,7 +171,7 @@ const PlanB = () => {
               (min $5, max $300)
             </Text>
           </Stack>
-          <Button w="300px" colorScheme="purple" py={6}>
+          <Button w="300px" colorScheme="purple" py={6} onClick={props.handleClick}>
             Get Access Now
           </Button>
         </Stack>

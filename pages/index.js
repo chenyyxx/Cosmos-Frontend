@@ -5,16 +5,22 @@ import Features from "@/components/Features";
 import Pricing from "@/components/Pricing";
 import Footer from "@/components/Footer";
 import SignupForm from "@/components/SignupForm"
+import {useRef} from 'react';
+
 
 export default function Home() {
+    const ref = useRef(null);
+    const handleClick = () => {
+        ref.current?.scrollIntoView({behavior: 'smooth'});
+      };
     return (
         <>
-            <Nav />
+            <Nav handleClick={handleClick} />
             <VStack w="full" mx="auto" spacing="24px" maxW="1200px" pt="4.5rem">
-                <Hero />
+                <Hero  handleClick={handleClick} />
                 <Features />
-                <Pricing />
-                <SignupForm />
+                <Pricing handleClick={handleClick} />
+                <SignupForm ref={ref} />
                 <Footer />
             </VStack>
         </>
