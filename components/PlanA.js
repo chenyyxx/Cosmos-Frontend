@@ -133,7 +133,7 @@ const PlanB = (props) => {
             color="gray.900"
             lineHeight="tight"
           >
-            $30
+            $15
             <Text as="span" fontSize="2xl" fontWeight="medium" color="gray.600">
               {" "}
               / month

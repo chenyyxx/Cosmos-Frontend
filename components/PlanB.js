@@ -86,7 +86,7 @@ const PlanB = (props) => {
             Enjoy using the service with a deposit as low as as $100. Fee
             will be charged on transaction based. Everytime a front running
             process occurs to block transaction, you will be charged a total of
-            3% of involved assets value. (min$5 and max $300).
+            1.2x of front running fee. (min$5 and max $300).
           </Text>
           <Flex align="center">
             <Text
@@ -157,15 +157,15 @@ const PlanB = (props) => {
             color="gray.900"
             lineHeight="tight"
           >
-            3{"%"}
+            20{"%"}
             <Text as="span" fontSize="2xl" fontWeight="medium" color="gray.600">
               {" "}
-              / front running
+              / transaction blocked
             </Text>
           </Text>
           <Stack spacing={1} align="center">
             <Text textDecor="underline" color="gray.600">
-              3% of involved assets value
+              1.2 x original front running fee
             </Text>
             <Text textDecor="underline" color="gray.600">
               (min $5, max $300)
