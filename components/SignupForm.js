@@ -24,7 +24,6 @@ const SignupForm = (props, ref) => {
   const [email, setEmail] = useState("");
   const [safeAddress, setSafeAddress] = useState("");
   const [safetyLevel, setSafetyLevel] = useState("");
-  const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -46,9 +45,7 @@ const SignupForm = (props, ref) => {
         method: "POST",
         body: JSON.stringify(form),
       }
-    ).then(setSubmitted(true));
-    console.log(submitted)
-    console.log(response.json());
+    )
   };
 
   return (
@@ -216,7 +213,7 @@ const SignupForm = (props, ref) => {
                 w="full" py={2} 
                 type="submit"
                 onClick={() =>
-                    submitted && toast({
+                    toast({
                       title: 'Form Submmited',
                       description: "Sign up successfully!",
                       status: 'success',
