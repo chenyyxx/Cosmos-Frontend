@@ -64,7 +64,7 @@ export default function Pricing() {
             fontSize={["lg", , "xl"]}
             color="gray.600"
           >
-            5 minute installation · Try Team plan features for 14 days · No
+            Try for Free Now! No
             credit card required
           </Text>
           <Flex justify="center" mx={["auto", 0]} mb={-2}>
@@ -182,7 +182,7 @@ export default function Pricing() {
                   fontWeight="semibold"
                   color="gray.700"
                 >
-                  Team
+                  Premium
                 </Text>
                 <Text
                   mb={2}
@@ -252,7 +252,7 @@ export default function Pricing() {
                   fontWeight="semibold"
                   color="gray.700"
                 >
-                  Company
+                  Expert
                 </Text>
                 <Text
                   mb={2}

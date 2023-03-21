@@ -2,17 +2,12 @@ import {
   Heading ,
   Text ,
   Button,
-  Link,
-  useDisclosure,
-  CloseButton,
-  VStack,
   Stack,
   Box,
   Icon,
-  Image
 } from '@chakra-ui/react';
 
-export default function Hero() {
+export default function Hero(props) {
   return (
     <Box px={8} py={8} mx="auto">
       <Box
@@ -44,7 +39,7 @@ export default function Hero() {
             color: "gray.100",
           }}
         >
-          All your{" "}
+          Keep your{" "}
           <Text
             display={{
               base: "block",
@@ -55,9 +50,9 @@ export default function Hero() {
             bgGradient="linear(to-r, green.400,purple.500)"
             fontWeight="extrabold"
           >
-            customer feedback
+            crypto transactions
           </Text>{" "}
-          in one single place.
+          safe and smooth.
         </Heading>
         <Text 
           px={{
@@ -74,9 +69,9 @@ export default function Hero() {
             color: "gray.300",
           }}
         >
-          Hellonext is a feature voting software where you can allow your users to
-          vote on features, publish roadmap, and complete your customer feedback
-          loop.
+          Cosmos is a smart and secure solution that prevents dangerous crypto transactions, 
+          verifies the identity and reputation of the recipients, and blocks of any suspicious activity or potential scams. 
+          With Cosmos, you can enjoy the benefits of crypto without the risks.
         </Text >
         <Stack
           direction={{
@@ -110,6 +105,7 @@ export default function Hero() {
             }}
             size="lg"
             cursor="pointer"
+            onClick={props.handleClick}
           >
             Start for Free
             <Icon boxSize={4} ml={1} viewBox="0 0 20 20" fill="currentColor">
@@ -120,7 +116,7 @@ export default function Hero() {
               />
             </Icon>
           </Button>
-          <Button
+          {/* <Button
             as="a"
             colorScheme="gray"
             display="inline-flex"
@@ -145,7 +141,7 @@ export default function Hero() {
                 clipRule="evenodd"
               />
             </Icon>
-          </Button>
+          </Button> */}
         </Stack>
       </Box>
     </Box>

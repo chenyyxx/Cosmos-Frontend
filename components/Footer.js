@@ -1,22 +1,20 @@
 import {
-  Link ,
-  Text ,
+  Link,
+  Text,
   Button,
   Flex,
   Stack,
   Box,
   Icon,
-  SimpleGrid
-} from '@chakra-ui/react';
+  SimpleGrid,
+} from "@chakra-ui/react";
+
+import Image from "next/image";
+import Logo from "../public/Cosmos-logos_transparent.png";
 
 export default function Footer() {
   return (
-    <Flex
-      w="full"
-      p={50}
-      alignItems="center"
-      justifyContent="center"
-    >
+    <Flex w="full" p={50} alignItems="center" justifyContent="center">
       <Flex
         w="full"
         as="footer"
@@ -33,24 +31,7 @@ export default function Footer() {
           bg: "gray.800",
         }}
       >
-        <a
-          href="#"
-          fontSize="xl"
-          fontWeight="bold"
-          color="gray.600"
-          _dark={{
-            color: "white",
-            _hover: {
-              color: "gray.300",
-            },
-          }}
-          _hover={{
-            color: "gray.700",
-          }}
-        >
-          Cosomos
-        </a>
-
+        <Image height={196} src={Logo} alt="Picture of the author" />
         <p
           py={{
             base: "2",
@@ -64,7 +45,7 @@ export default function Footer() {
           All rights reserved
         </p>
 
-        <Flex mx="-2">
+        <Flex mx="23">
           <a
             href="#"
             mx="2"
@@ -127,6 +108,5 @@ export default function Footer() {
         </Flex>
       </Flex>
     </Flex>
-
-  )
+  );
 }
