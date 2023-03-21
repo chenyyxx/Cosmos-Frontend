@@ -22,8 +22,9 @@ const SignupForm = (props, ref) => {
     const [safetyLevel, setSafetyLevel] = useState("");
 
     const handleSubmit = async (e) => {
-        alert("submitted successfully");
         e.preventDefault();
+        let dev = process.env.NODE_ENV !== 'production';
+        let { DEV_URL, PROD_URL } = process.env;
         let form = {
             firstName,
             lastName,
@@ -32,7 +33,7 @@ const SignupForm = (props, ref) => {
             safetyLevel,
             submittedAt: new Date().toISOString(),
         }
-        let response = await fetch('/api/submit', {
+        let response = await fetch(`${dev ? DEV_URL : PROD_URL}/submit`, {
             method: 'POST',
             body: JSON.stringify(form),
         });
