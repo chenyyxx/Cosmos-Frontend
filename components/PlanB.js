@@ -160,9 +160,13 @@ const PlanB = (props) => {
             20{"%"}
             <Text as="span" fontSize="2xl" fontWeight="medium" color="gray.600">
               {" "}
-              / transaction blocked
+              per
             </Text>
           </Text>
+          <Text as="span" fontSize="2xl" fontWeight="medium" color="gray.600">
+              {" "}
+              transaction blocked
+            </Text>
           <Stack spacing={1} align="center">
             <Text textDecor="underline" color="gray.600">
               1.2 x original front running fee
