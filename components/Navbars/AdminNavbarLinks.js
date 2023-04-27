@@ -68,8 +68,24 @@ export default function HeaderLinks(props) {
         }}
       >
         <InputLeftElement
-          children={
-            <IconButton
+          // children={
+          //   <IconButton
+          //     bg="inherit"
+          //     borderRadius="inherit"
+          //     _hover="none"
+          //     _active={{
+          //       bg: "inherit",
+          //       transform: "none",
+          //       borderColor: "transparent",
+          //     }}
+          //     _focus={{
+          //       boxShadow: "none",
+          //     }}
+          //     icon={<SearchIcon color={searchIcon} w="15px" h="15px" />}
+          //   ></IconButton>
+          // }
+        >
+          <IconButton
               bg="inherit"
               borderRadius="inherit"
               _hover="none"
@@ -83,8 +99,7 @@ export default function HeaderLinks(props) {
               }}
               icon={<SearchIcon color={searchIcon} w="15px" h="15px" />}
             ></IconButton>
-          }
-        />
+        </InputLeftElement>
         <Input
           fontSize="xs"
           py="11px"
