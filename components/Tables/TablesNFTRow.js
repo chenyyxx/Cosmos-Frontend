@@ -9,7 +9,6 @@ import {
   Button,
   useColorModeValue,
 } from "@chakra-ui/react";
-import Nft1 from "public/NFTs/nft1.svg";
 
 function TablesNFTRow(props) {
   const { icon, name, status } = props;
