@@ -13,7 +13,7 @@ import {
   import Card from "components/Card/Card.js";
   import CardBody from "components/Card/CardBody.js";
   import CardHeader from "components/Card/CardHeader.js";
-  import TablesProjectRow from "components/Tables/TablesProjectRow";
+  import TablesNFTRow from "components/Tables/TablesNFTRow";
   import React from "react";
   
   const NFT = ({ title, captions, data }) => {
@@ -43,13 +43,11 @@ import {
             <Tbody>
               {data.map((row) => {
                 return (
-                  <TablesProjectRow
-                    key={row.name}
-                    name={row.name}
-                    logo={row.logo}
-                    status={row.status}
-                    budget={row.budget}
-                    progression={row.progression}
+                  <TablesNFTRow
+                  key={`${row.name}`}
+                  name={row.name}
+                  icon={row.icon}
+                  status={row.status}
                   />
                 );
               })}

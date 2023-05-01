@@ -1,13 +1,10 @@
 // public
-import avatar1 from "public/img/avatars/avatar1.png";
-import avatar2 from "public/img/avatars/avatar2.png";
-import avatar3 from "public/img/avatars/avatar3.png";
-import avatar4 from "public/img/avatars/avatar4.png";
-import avatar5 from "public/img/avatars/avatar5.png";
-import avatar7 from "public/img/avatars/avatar7.png";
-import avatar8 from "public/img/avatars/avatar8.png";
-import avatar9 from "public/img/avatars/avatar9.png";
-import avatar10 from "public/img/avatars/avatar10.png";
+import { Ethereum } from "@thirdweb-dev/chain-icons";
+import { Bitcoin } from "@thirdweb-dev/chain-icons";
+import { Dogecoin } from "@thirdweb-dev/chain-icons";
+import { Polygon } from "@thirdweb-dev/chain-icons";
+
+import { Image } from '@chakra-ui/react'
 // Custom icons
 import {
   AdobexdLogo,
@@ -29,48 +26,26 @@ import {
 } from "react-icons/fa";
 import { SiDropbox } from "react-icons/si";
 
-export const dashboardTableData = [
+export const tablesNFTData = [
   {
-    logo: AdobexdLogo,
-    name: "Purity UI Version",
-    members: [avatar1, avatar2, avatar3, avatar4, avatar5],
-    budget: "$14,000",
-    progression: 60,
+    icon: <Image src='https://i.seadn.io/gae/lHexKRMpw-aoSyB1WdFBff5yfANLReFxHzt1DOj_sg7mS14yARpuvYcUtsyyx-Nkpk6WTcUPFoG53VnLJezYi8hAs0OxNZwlw6Y-dmI?auto=format&w=136&h=136&fr=1' alt='nft1' width="60px"/>,
+    name: "Mutant Ape Yacht Club",
+    status: "On",
   },
   {
-    logo: AtlassianLogo,
-    name: "Add Progress Track",
-    members: [avatar3, avatar2],
-    budget: "$3,000",
-    progression: 10,
+    icon: <Image src='https://i.seadn.io/gae/H8jOCJuQokNqGBpkBN5wk1oZwO7LM8bNnrHCaekV2nKjnCqw6UB5oaH8XyNeBDj6bA_n1mjejzhFQUP3O1NfjFLHr3FOaeHcTOOT?auto=format&w=136&h=136&fr=1' alt='nft2' width="60px"/>,
+    name: "Azuki",
+    status: "On",
   },
   {
-    logo: SlackLogo,
-    name: "Fix Platform Errors",
-    members: [avatar10, avatar4],
-    budget: "Not set",
-    progression: 100,
+    icon: <Image src='https://i.seadn.io/gae/_R4fuC4QGYd14-KwX2bD1wf-AWjDF2VMabfqWFJhIgiN2FnAUpnD5PLdJORrhQ8gly7KcjhQZZpuzYVPF7CDSzsqmDh97z84j2On?auto=format&w=136&h=136&fr=1' alt='nft3' width="60px"/>,
+    name: "BEANZ Official",
+    status: "On",
   },
   {
-    logo: SpotifyLogo,
-    name: "Launch our Mobile App",
-    members: [avatar2, avatar3, avatar7, avatar8],
-    budget: "$32,000",
-    progression: 100,
-  },
-  {
-    logo: JiraLogo,
-    name: "Add the New Pricing Page",
-    members: [avatar10, avatar3, avatar7, avatar2, avatar8],
-    budget: "$400",
-    progression: 25,
-  },
-  {
-    logo: InvisionLogo,
-    name: "Redesign New Online Shop",
-    members: [avatar9, avatar3, avatar2],
-    budget: "$7,600",
-    progression: 40,
+    icon: <Image src='https://i.seadn.io/gcs/files/f1996d5647f51b84a1932fb0001fb03d.jpg?auto=format&w=136&h=136&fr=1' alt='nft4' width="60px"/>,
+    name: "The Bond Bears",
+    status: "Off",
   },
 ];
 
@@ -111,143 +86,27 @@ export const timelineData = [
     date: "18 DEC 4:41 PM",
   },
 ];
-export const rtlDashboardTableData = [
-  {
-    logo: AdobexdLogo,
-    name: "نسخة Purity UI",
-    members: [avatar1, avatar2, avatar3, avatar4, avatar5],
-    budget: "$14,000",
-    progression: 60,
-  },
-  {
-    logo: AtlassianLogo,
-    name: "إضافة مسار التقدم",
-    members: [avatar3, avatar2],
-    budget: "$3,000",
-    progression: 10,
-  },
-  {
-    logo: SlackLogo,
-    name: "إصلاح أخطاء النظام الأساسي",
-    members: [avatar10, avatar4],
-    budget: "غير مضبوط",
-    progression: 100,
-  },
-  {
-    logo: SpotifyLogo,
-    name: "إطلاق تطبيق الهاتف المحمول الخاص بنا",
-    members: [avatar2, avatar3, avatar7, avatar8],
-    budget: "$32,000",
-    progression: 100,
-  },
-  {
-    logo: JiraLogo,
-    name: "أضف صفحة التسعير الجديدة",
-    members: [avatar10, avatar3, avatar7, avatar2, avatar8],
-    budget: "$400",
-    progression: 25,
-  },
-  {
-    logo: InvisionLogo,
-    name: "إعادة تصميم متجر جديد على الإنترنت",
-    members: [avatar9, avatar3, avatar2],
-    budget: "$7,600",
-    progression: 40,
-  },
-];
 
-export const rtlTimelineData = [
+export const tablesCryptoData = [
   {
-    logo: FaBell,
-    title: "$2400, تغييرات في التصميم",
-    date: "22 DEC 7:20 PM",
-    color: "teal.300",
+    icon: <Ethereum width="40px"/>,
+    name: "Ethereum",
+    status: "On",
   },
   {
-    logo: FaHtml5,
-    title: "طلب جديد #4219423",
-    date: "21 DEC 11:21 PM",
-    color: "orange",
+    icon: <Bitcoin width="40px"/>,
+    name: "Bitcoin",
+    status: "On",
   },
   {
-    logo: FaShoppingCart,
-    title: "مدفوعات الخادم لشهر أبريل",
-    date: "21 DEC 9:28 PM",
-    color: "blue.400",
+    icon: <Dogecoin width="40px"/>,
+    name: "Dogecoin",
+    status: "On",
   },
   {
-    logo: FaCreditCard,
-    title: "تمت إضافة بطاقة جديدة للطلب #3210145",
-    date: "20 DEC 3:52 PM",
-    color: "orange.300",
-  },
-  {
-    logo: SiDropbox,
-    title: "فتح الحزم من أجل التنمية",
-    date: "19 DEC 11:35 PM",
-    color: "purple",
-  },
-  {
-    logo: AdobexdLogo,
-    title: "طلب جديد #9851258",
-    date: "18 DEC 4:41 PM",
-  },
-];
-
-export const tablesTableData = [
-  {
-    logo: avatar1,
-    name: "Esthera Jackson",
-    email: "alexa@simmmple.com",
-    subdomain: "Manager",
-    domain: "Organization",
-    status: "Online",
-    date: "14/06/21",
-  },
-  {
-    logo: avatar2,
-    name: "Alexa Liras",
-    email: "laurent@simmmple.com",
-    subdomain: "Programmer",
-    domain: "Developer",
-    status: "Offline",
-    date: "12/05/21",
-  },
-  {
-    logo: avatar3,
-    name: "Laurent Michael",
-    email: "laurent@simmmple.com",
-    subdomain: "Executive",
-    domain: "Projects",
-    status: "Online",
-    date: "07/06/21",
-  },
-  {
-    logo: avatar4,
-    name: "Freduardo Hill",
-    email: "freduardo@simmmple.com",
-    subdomain: "Manager",
-    domain: "Organization",
-    status: "Online",
-    date: "14/11/21",
-  },
-  {
-    logo: avatar5,
-    name: "Daniel Thomas",
-    email: "daniel@simmmple.com",
-    subdomain: "Programmer",
-    domain: "Developer",
-    status: "Offline",
-    date: "21/01/21",
-  },
-  {
-    logo: avatar7,
-    name: "Mark Wilson",
-    email: "mark@simmmple.com",
-    subdomain: "Designer",
-    domain: "UI/UX Design",
-    status: "Offline",
-    date: "04/09/20",
+    icon: <Polygon width="40px"/>,
+    name: "Polygon",
+    status: "Off",
   },
 ];
 

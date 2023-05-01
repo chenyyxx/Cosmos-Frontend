@@ -12,7 +12,7 @@ import {
   import Card from "components/Card/Card.js";
   import CardBody from "components/Card/CardBody.js";
   import CardHeader from "components/Card/CardHeader.js";
-  import TablesTableRow from "components/Tables/TablesTableRow";
+  import TablesCryptoRow from "components/Tables/TablesCryptoRow";
   import React from "react";
   
   const Crypto = ({ title, captions, data }) => {
@@ -40,15 +40,11 @@ import {
             <Tbody>
               {data.map((row) => {
                 return (
-                  <TablesTableRow
-                    key={`${row.email}-${row.name}`}
+                  <TablesCryptoRow
+                    key={`${row.name}`}
                     name={row.name}
-                    logo={row.logo}
-                    email={row.email}
-                    subdomain={row.subdomain}
-                    domain={row.domain}
+                    icon={row.icon}
                     status={row.status}
-                    date={row.date}
                   />
                 );
               })}
