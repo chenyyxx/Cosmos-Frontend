@@ -9,17 +9,9 @@ import {
   InputGroup,
   InputLeftElement,
   Link,
-  Menu,
-  MenuButton,
-  MenuItem,
-  MenuList,
-  Text,
   useColorModeValue,
 } from "@chakra-ui/react";
 // public
-import avatar1 from "public/img/avatars/avatar1.png";
-import avatar2 from "public/img/avatars/avatar2.png";
-import avatar3 from "public/img/avatars/avatar3.png";
 // Custom Icons
 import { ProfileIcon, SettingsIcon } from "components/Icons/Icons";
 // Custom Components
@@ -51,7 +43,7 @@ export default function HeaderLinks(props) {
       alignItems="center"
       flexDirection="row"
     >
-      <InputGroup
+      {/* <InputGroup
         cursor="pointer"
         bg={inputBg}
         borderRadius="15px"
@@ -107,7 +99,7 @@ export default function HeaderLinks(props) {
           placeholder="Type here..."
           borderRadius="inherit"
         />
-      </InputGroup>
+      </InputGroup> */}
       <Button
         as={Link}
         href="/auth/signin"

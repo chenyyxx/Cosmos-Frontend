@@ -53,7 +53,7 @@ function TablesCryptoRow(props) {
       </Td>
       <Td>
         <Badge
-          bg={protectionStatus === "On" ? "green.400" : bgStatus}
+          bg={protectionStatus === "On" ? "purple.400" : bgStatus}
           color={protectionStatus === "On" ? "white" : colorStatus}
           fontSize="16px"
           p="3px 10px"
@@ -63,7 +63,7 @@ function TablesCryptoRow(props) {
         </Badge>
       </Td>
       <Td>
-        <Switch colorScheme='teal' size='lg'
+        <Switch colorScheme='purple' size='lg'
           isChecked={switched}
           onChange={(event) => {
             if (switched === true) {

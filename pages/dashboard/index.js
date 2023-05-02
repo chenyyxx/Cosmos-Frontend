@@ -4,6 +4,8 @@ import Tables from "/components/Tables/Tables";
 import { ChakraProvider, Portal, useDisclosure, VStack } from '@chakra-ui/react';
 // Layout components
 import AdminNavbar from 'components/Navbars/AdminNavbar.js';
+// import Configurator from '../../components/Configurator/Configurator';
+// import FixedPlugin from '../../components/FixedPlugin/FixedPlugin';
 import React, { useState } from 'react';
 // import '@fontsource/roboto/400.css';
 // import '@fontsource/roboto/500.css';
@@ -11,10 +13,9 @@ import React, { useState } from 'react';
 // Custom Chakra theme
 import theme from 'theme/theme.js';
 // Custom components
-import MainPanel from '../components/Layout/MainPanel';
-import PanelContainer from '../components/Layout/PanelContainer';
-import PanelContent from '../components/Layout/PanelContent';
-import Configurator from 'components/Configurator/Configurator';
+import MainPanel from '../../components/Layout/MainPanel';
+import PanelContainer from '../../components/Layout/PanelContainer';
+import PanelContent from '../../components/Layout/PanelContent';
 export default function Dashboard(props) {
 	const { ...rest } = props;
 	// states and functions
@@ -54,8 +55,7 @@ export default function Dashboard(props) {
                     <Portal>
                         <AdminNavbar
                             onOpen={onOpen}
-                            logoText={'PURITY UI DASHBOARD'}
-                            brandText={'Cosmos Dashboard'}
+                            brandText={'Cosmos'}
                             // secondary={getActiveNavbar(routes)}
                             fixed={fixed}
                             {...rest}
@@ -67,18 +67,7 @@ export default function Dashboard(props) {
                             </PanelContainer>
                         </PanelContent>
                 </MainPanel>
-                <Configurator
-                        isOpen={isOpen}
-                        onClose={onClose}
-                        isChecked={fixed}
-                        onSwitch={(value) => {
-                            setFixed(value);
-                        }}
-                        onOpaque={() => setSidebarVariant('opaque')}
-                        onTransparent={() => setSidebarVariant('transparent')}
-                    />
             </VStack>
-			
 		</ChakraProvider>
 	);
 }

@@ -5,11 +5,13 @@ import {
   Link,
   useColorModeValue,
   VStack,
-  Text,
+  HStack,
 } from "@chakra-ui/react";
 import PropTypes from "prop-types";
 import React, { useState } from "react";
 import AdminNavbarLinks from "./AdminNavbarLinks";
+import Logo from "/public/Cosmos-logos_transparent.png";
+import Image from "next/image";
 
 export default function AdminNavbar(props) {
   const textColor = useColorModeValue("gray.700", "white");
@@ -86,6 +88,7 @@ export default function AdminNavbar(props) {
         alignItems={{ xl: "center" }}
         borderRadius="16px"
         display="flex"
+        h="4.5rem"
         minH="75px"
         justifyContent={{ xl: "center" }}
         lineHeight="25.6px"
@@ -117,9 +120,9 @@ export default function AdminNavbar(props) {
           <Box mb={{ sm: "8px", md: "0px" }}>
             
             {/* Here we create navbar brand, based on route name */}
-            <Link
+            {/* <Link
               color={mainText}
-              href="#"
+              href="/"
               bg="inherit"
               borderRadius="inherit"
               fontWeight="bold"
@@ -136,7 +139,14 @@ export default function AdminNavbar(props) {
               <Text fontSize='2xl' color={textColor} fontWeight='bold'>
               {brandText}
             </Text>
-            </Link>
+            </Link> */}
+            <Link
+            href='/'
+        >
+            <HStack>
+              <Image height={196} src={Logo} alt="Picture of the author" />
+            </HStack>
+        </Link>
           </Box>
           <Box ms="auto" w={{ sm: "100%", md: "unset" }}>
             <AdminNavbarLinks

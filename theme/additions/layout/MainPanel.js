@@ -1,6 +1,6 @@
 const MainPanel = {
   baseStyle: {
-    // float: "right",
+    float: "right",
     maxWidth: "100%",
     overflow: "auto",
     position: "relative",
@@ -10,17 +10,17 @@ const MainPanel = {
     transitionProperty: "top, bottom, width",
     transitionTimingFunction: "linear, linear, ease",
   },
-  // variants: {
-  //   main: (props) => ({
-  //     float: "right",
-  //   }),
-  //   rtl: (props) => ({
-  //     float: "left",
-  //   }),
-  // },
-  // defaultProps: {
-  //   variant: "main",
-  // },
+  variants: {
+    main: (props) => ({
+      float: "right",
+    }),
+    rtl: (props) => ({
+      float: "left",
+    }),
+  },
+  defaultProps: {
+    variant: "main",
+  },
 };
 
 export const MainPanelComponent = {

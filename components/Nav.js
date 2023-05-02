@@ -157,7 +157,7 @@ export default function Nav(props) {
               md: "flex",
             }}
           >
-            <Button colorScheme="purple" variant="ghost" size="sm">
+            <Button as={Link} href="/auth/signin" colorScheme="purple" variant="ghost" size="sm">
               Log In
             </Button>
             <Button colorScheme="purple" variant="solid" size="sm" onClick={props.handleClick}>
