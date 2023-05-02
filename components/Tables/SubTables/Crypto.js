@@ -27,7 +27,7 @@ import {
         <CardBody>
           <Table variant='simple' color={textColor}>
             <Thead>
-              <Tr my='.8rem' pl='0px' color='gray.400'>
+              <Tr my='.8rem' pl='0px' >
                 {captions.map((caption, idx) => {
                   return (
                     <Th color='gray.400' key={idx} ps={idx === 0 ? "0px" : null}>

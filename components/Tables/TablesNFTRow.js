@@ -22,10 +22,10 @@ function TablesNFTRow(props) {
   }
   return (
     <Tr>
-      <Td minWidth={{ sm: "250px" }} pl="0px">
-        <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
+      <Td minWidth={{ sm: "200px" }} pl="0px">
+        <Flex align="center" py=".8rem" maxWidth='400px' height='80px' flexWrap="nowrap">
           {icon}
-          <Flex pl='50px' direction="column">
+          <Flex  pl={{sm: '20px', lg:'50px'}} direction="column">
             <Text
               fontSize="md"
               color={textColor}
@@ -36,18 +36,6 @@ function TablesNFTRow(props) {
             </Text>
           </Flex>
         </Flex>
-      </Td>
-      <Td>
-        <Button p="0px" bg="transparent" variant="no-hover">
-          <Text
-            fontSize="md"
-            color="gray.400"
-            fontWeight="bold"
-            cursor="pointer"
-          >
-            View Transaction
-          </Text>
-        </Button>
       </Td>
       <Td>
         <Badge

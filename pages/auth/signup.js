@@ -7,6 +7,7 @@ import {
     FormControl,
     FormLabel,
     HStack,
+    Heading,
     Icon,
     Input,
     Link,
@@ -51,9 +52,9 @@ function SignUp() {
                             zIndex="-1"
                             top="0"
                             bgGradient={[
-                                "linear(to-tr, teal.300, yellow.400)",
-                                "linear(to-t, blue.200, teal.500)",
-                                "linear(to-b, orange.100, purple.300)",
+                                "linear(to-tr, teal.400, yellow.600)",
+                                "linear(to-t, blue.300, teal.600)",
+                                "linear(to-b, orange.200, purple.400)",
                             ]}
                             bgSize="cover"
                             mx={{ md: "auto" }}
@@ -66,13 +67,21 @@ function SignUp() {
                             align="center"
                             mt="6.5rem"
                             mb="30px"
+                            
                         >
                             <Text
                                 fontSize="4xl"
                                 color="white"
                                 fontWeight="bold"
                             >
-                                Welcome!
+                                Ready to experience scams
+                            </Text>
+                            <Text
+                                fontSize="4xl"
+                                color="white"
+                                fontWeight="bold"
+                            >
+                                free transactions?
                             </Text>
                             <Text
                                 fontSize="md"
@@ -87,8 +96,9 @@ function SignUp() {
                                     xl: "30%",
                                 }}
                             >
-                                Use these awesome forms to login or create new
-                                account in your project for free.
+                                Don’t wait until it’s too late. Protect your crypto assets today
+                                with our secure and reliable transaction system. Try it now and
+                                experience peace of mind.
                             </Text>
                         </Flex>
                         <Flex

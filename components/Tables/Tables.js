@@ -10,12 +10,12 @@ function Tables() {
     <Flex direction='column' pt={{ base: "120px", md: "75px" }}>
       <Crypto
         title={"Crypto Table"}
-        captions={["Cryptocurrencies", "Transactions" , "Protection", "Control" ]}
+        captions={["Cryptocurrencies" , "Protection", "Control" ]}
         data={tablesCryptoData}
       />
       <NFT
         title={"NFT Table"}
-        captions={["NFTs", "Transaction" , "Protection", "Control"]}
+        captions={["NFTs" , "Protection", "Control"]}
         data={tablesNFTData}
       />
     </Flex>

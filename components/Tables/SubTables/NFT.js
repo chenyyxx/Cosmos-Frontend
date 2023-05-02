@@ -21,14 +21,12 @@ import {
     return (
       <Card my='22px' overflowX={{ sm: "scroll", xl: "hidden" }}>
         <CardHeader p='6px 0px 22px 0px'>
-          <Flex direction='column'>
-            <Text fontSize='lg' color={textColor} fontWeight='bold' pb='.5rem'>
+            <Text fontSize='xl' color={textColor} fontWeight='bold'>
               {title}
             </Text>
-          </Flex>
         </CardHeader>
         <CardBody>
-          <Table variant='simple' color={textColor}>
+          <Table variant='simple' color={textColor}> 
             <Thead>
               <Tr my='.8rem' pl='0px'>
                 {captions.map((caption, idx) => {

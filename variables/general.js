@@ -4,7 +4,7 @@ import { Bitcoin } from "@thirdweb-dev/chain-icons";
 import { Dogecoin } from "@thirdweb-dev/chain-icons";
 import { Polygon } from "@thirdweb-dev/chain-icons";
 
-import { Image } from '@chakra-ui/react'
+import { Image, Flex } from '@chakra-ui/react'
 // Custom icons
 import {
   AdobexdLogo,
@@ -28,22 +28,22 @@ import { SiDropbox } from "react-icons/si";
 
 export const tablesNFTData = [
   {
-    icon: <Image src='https://i.seadn.io/gae/lHexKRMpw-aoSyB1WdFBff5yfANLReFxHzt1DOj_sg7mS14yARpuvYcUtsyyx-Nkpk6WTcUPFoG53VnLJezYi8hAs0OxNZwlw6Y-dmI?auto=format&w=136&h=136&fr=1' alt='nft1' width="60px"/>,
-    name: "Mutant Ape Yacht Club",
+    icon: <Image borderRadius='10px' src='https://i.seadn.io/gae/lHexKRMpw-aoSyB1WdFBff5yfANLReFxHzt1DOj_sg7mS14yARpuvYcUtsyyx-Nkpk6WTcUPFoG53VnLJezYi8hAs0OxNZwlw6Y-dmI?auto=format&w=136&h=136&fr=1' alt='nft1' width={"50px"}/>,
+    name: "Mutant Ape",
     status: "On",
   },
   {
-    icon: <Image src='https://i.seadn.io/gae/H8jOCJuQokNqGBpkBN5wk1oZwO7LM8bNnrHCaekV2nKjnCqw6UB5oaH8XyNeBDj6bA_n1mjejzhFQUP3O1NfjFLHr3FOaeHcTOOT?auto=format&w=136&h=136&fr=1' alt='nft2' width="60px"/>,
+    icon: <Image borderRadius='10px' src='https://i.seadn.io/gae/H8jOCJuQokNqGBpkBN5wk1oZwO7LM8bNnrHCaekV2nKjnCqw6UB5oaH8XyNeBDj6bA_n1mjejzhFQUP3O1NfjFLHr3FOaeHcTOOT?auto=format&w=136&h=136&fr=1' alt='nft2' width="50px"/>,
     name: "Azuki",
     status: "On",
   },
   {
-    icon: <Image src='https://i.seadn.io/gae/_R4fuC4QGYd14-KwX2bD1wf-AWjDF2VMabfqWFJhIgiN2FnAUpnD5PLdJORrhQ8gly7KcjhQZZpuzYVPF7CDSzsqmDh97z84j2On?auto=format&w=136&h=136&fr=1' alt='nft3' width="60px"/>,
+    icon: <Image borderRadius='10px' src='https://i.seadn.io/gae/_R4fuC4QGYd14-KwX2bD1wf-AWjDF2VMabfqWFJhIgiN2FnAUpnD5PLdJORrhQ8gly7KcjhQZZpuzYVPF7CDSzsqmDh97z84j2On?auto=format&w=136&h=136&fr=1' alt='nft3' width="50px"/>,
     name: "BEANZ Official",
     status: "On",
   },
   {
-    icon: <Image src='https://i.seadn.io/gcs/files/f1996d5647f51b84a1932fb0001fb03d.jpg?auto=format&w=136&h=136&fr=1' alt='nft4' width="60px"/>,
+    icon: <Image borderRadius='10px' src='https://i.seadn.io/gcs/files/f1996d5647f51b84a1932fb0001fb03d.jpg?auto=format&w=136&h=136&fr=1' alt='nft4' width="50px"/>,
     name: "The Bond Bears",
     status: "Off",
   },
@@ -89,7 +89,7 @@ export const timelineData = [
 
 export const tablesCryptoData = [
   {
-    icon: <Ethereum width="40px"/>,
+    icon: <Flex mx="4px"><Ethereum  width="32px"/></Flex>,
     name: "Ethereum",
     status: "On",
   },

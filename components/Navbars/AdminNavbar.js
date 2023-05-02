@@ -16,15 +16,8 @@ import Image from "next/image";
 export default function AdminNavbar(props) {
   const textColor = useColorModeValue("gray.700", "white");
   const [scrolled, setScrolled] = useState(false);
-  const {
-    variant,
-    children,
-    fixed,
-    secondary,
-    brandText,
-    onOpen,
-    ...rest
-  } = props;
+  const { variant, children, fixed, secondary, brandText, onOpen, ...rest } =
+    props;
 
   // Here are all the props that may change depending on navbar's type or state.(secondary, variant, scrolled)
   let mainText = useColorModeValue("gray.700", "gray.200");
@@ -53,7 +46,7 @@ export default function AdminNavbar(props) {
     "none",
     "drop-shadow(0px 7px 23px rgba(0, 0, 0, 0.05))"
   );
-    // }
+  // }
   if (props.secondary) {
     navbarBackdrop = "none";
     navbarPosition = "absolute";
@@ -71,95 +64,47 @@ export default function AdminNavbar(props) {
   };
   window.addEventListener("scroll", changeNavbar);
   return (
-    <VStack w="full" px='24px' mx="auto">
+    <Flex
+      position={navbarPosition}
+      top="16px"
+      left="50%"
+      transform="translate(-50%, 0px)"
+      background={navbarBg}
+      border={navbarBorder}
+      boxShadow={navbarShadow}
+      filter={navbarFilter}
+      backdropFilter={navbarBackdrop}
+      borderRadius="15px"
+      px="16px"
+      py="22px"
+      mx="auto"
+      width="1044px"
+      maxW="90%"
+      alignItems="center"
+      // overflowY="hidden"
+      h="4.5rem"
+    >
       <Flex
-        position={navbarPosition}
-        boxShadow={navbarShadow}
-        bg={navbarBg}
-        borderColor={navbarBorder}
-        filter={navbarFilter}
-        backdropFilter={navbarBackdrop}
-        borderWidth="1.5px"
-        borderStyle="solid"
-        transitionDelay="0s, 0s, 0s, 0s"
-        transitionDuration=" 0.25s, 0.25s, 0.25s, 0s"
-        transition-property="box-shadow, background-color, filter, border"
-        transitionTimingFunction="linear, linear, linear, linear"
-        alignItems={{ xl: "center" }}
-        borderRadius="16px"
-        display="flex"
-        h="4.5rem"
-        minH="75px"
-        justifyContent={{ xl: "center" }}
-        lineHeight="25.6px"
-        mx="auto"
-        mt={secondaryMargin}
-        pb="8px"
-        // left={document.documentElement.dir === "rtl" ? "30px" : ""}
-        // right={document.documentElement.dir === "rtl" ? "" : "30px"}
-        px={{
-          sm: paddingX,
-          md: "30px",
-        }}
-        ps={{
-          xl: "12px",
-        }}
-        pt="8px"
-        top="18px"
-        w='85%'
-        maxW={'1100px'}
+        w="100%"
+        justifyContent={"space-between" }
       >
-        <Flex
-          w="100%"
-          flexDirection={{
-            sm: "column",
-            md: "row",
-          }}
-          alignItems={{ xl: "center" }}
-        >
-          <Box mb={{ sm: "8px", md: "0px" }}>
-            
-            {/* Here we create navbar brand, based on route name */}
-            {/* <Link
-              color={mainText}
-              href="/"
-              bg="inherit"
-              borderRadius="inherit"
-              fontWeight="bold"
-              _hover={{ color: { mainText } }}
-              _active={{
-                bg: "inherit",
-                transform: "none",
-                borderColor: "transparent",
-              }}
-              _focus={{
-                boxShadow: "none",
-              }}
-            >
-              <Text fontSize='2xl' color={textColor} fontWeight='bold'>
-              {brandText}
-            </Text>
-            </Link> */}
-            <Link
-            href='/'
-        >
+        <Box mb={{ sm: "8px", md: "0px" }}>
+          <Link href="/">
             <HStack>
               <Image height={196} src={Logo} alt="Picture of the author" />
             </HStack>
-        </Link>
-          </Box>
-          <Box ms="auto" w={{ sm: "100%", md: "unset" }}>
-            <AdminNavbarLinks
-              onOpen={props.onOpen}
-              logoText={props.logoText}
-              secondary={props.secondary}
-              fixed={props.fixed}
-            />
-          </Box>
-        </Flex>
+          </Link>
+        </Box>
       </Flex>
-    </VStack>
-    
+      <Box ms="auto" >
+          <AdminNavbarLinks
+            onOpen={props.onOpen}
+            logoText={props.logoText}
+            secondary={props.secondary}
+            fixed={props.fixed}
+          />
+        </Box>
+    </Flex>
   );
 }
 
